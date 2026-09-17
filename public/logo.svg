@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80" fill="none">
+  <defs>
+    <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F766E"/>
+      <stop offset="100%" stop-color="#115E59"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="50%" stop-color="#D4A853"/>
+      <stop offset="100%" stop-color="#B45309"/>
+    </linearGradient>
+    <filter id="subtleGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0F766E" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <!-- Logo Mark Icon -->
+  <g filter="url(#subtleGlow)" transform="translate(6, 8)">
+    <!-- Outer Shield / Organic Leaf Shape -->
+    <path d="M32 4 C48 4 60 14 60 32 C60 52 32 64 32 64 C32 64 4 52 4 32 C4 14 16 4 32 4 Z" fill="url(#shieldGrad)" />
+    
+    <!-- Accent Ring -->
+    <path d="M32 9 C45 9 55 17 55 32 C55 48 32 58 32 58 C32 58 9 48 9 32 C9 17 19 9 32 9 Z" stroke="url(#goldGrad)" stroke-width="1.5" fill="none" opacity="0.85" />
+    
+    <!-- Medical Plus Cross in Center -->
+    <rect x="28" y="20" width="8" height="24" rx="4" fill="#FFFFFF" />
+    <rect x="20" y="28" width="24" height="8" rx="4" fill="#FFFFFF" />
+    
+    <!-- Tiny golden healing dot -->
+    <circle cx="32" cy="32" r="2.5" fill="url(#goldGrad)" />
+  </g>
+
+  <!-- Typography Wordmark -->
+  <g transform="translate(80, 24)">
+    <text x="0" y="22" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="25" font-weight="800" fill="#0F766E" letter-spacing="-0.5">AMRITHA</text>
+    <text x="122" y="22" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="25" font-weight="400" fill="#D4A853" letter-spacing="1">CLINIC</text>
+    <text x="1" y="38" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="9" font-weight="600" fill="#64748B" letter-spacing="3.5">HEALTHCARE NETWORK • TN</text>
+  </g>
+</svg>

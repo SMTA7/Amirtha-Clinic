@@ -1,0 +1,177 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "branches": "Branches",
+    "services": "Services",
+    "doctors": "Doctors",
+    "contact": "Contact",
+    "bookAppointment": "Book Appointment"
+  },
+  "hero": {
+    "badge": "5+ Care Locations Across Tamil Nadu",
+    "titleLine1": "Trusted Healthcare,",
+    "titleLine2": "Closer to You",
+    "subtitle": "Bringing compassionate, 24-hour medical care and experienced doctors right to our local communities in Veeracholan, Perunali, Vembar, Narikkudi, Potakavayal, and Nainarkovil.",
+    "ctaBook": "Book Appointment",
+    "ctaBranches": "Find Nearest Branch",
+    "scrollDown": "Scroll down to explore"
+  },
+  "trust": {
+    "branchesCount": "5+",
+    "branchesLabel": "Care Branches",
+    "branchesDesc": "Across southern Tamil Nadu",
+    "emergency24": "24×7",
+    "emergencyLabel": "Emergency Care",
+    "emergencyDesc": "At Veeracholan, Perunali & Vembar",
+    "yearsCount": "15+",
+    "yearsLabel": "Years of Service",
+    "yearsDesc": "Dedicated family-first care",
+    "doctorsCount": "12+",
+    "doctorsLabel": "Specialist Doctors",
+    "doctorsDesc": "Compassionate medical staff"
+  },
+  "about": {
+    "badge": "Our Heart & Heritage",
+    "title": "A Community Clinic Built on Trust and Care",
+    "para1": "Amritha Clinic was founded with a simple, genuine promise: no patient should have to travel hours to the city just to receive trustworthy, attentive medical attention. What began as a neighborhood practice has grown into a close-knit network of strategic branches across Tamil Nadu.",
+    "para2": "We combine modern clinical diagnostics, 24×7 inpatient observation, and pharmacy care with the warmth of a family physician who truly listens. From everyday wellness checkups to urgent midnight care, our doors are open with doctors who know our patients by name.",
+    "highlight1": "24×7 Round-the-clock emergency assistance",
+    "highlight2": "Affordable treatment plans tailored for local families",
+    "highlight3": "In-house pharmacy & rapid diagnostic testing",
+    "badgeFloating": "Caring for 25,000+ families every year"
+  },
+  "branches": {
+    "badge": "Our Network",
+    "title": "Find an Amritha Clinic Near You",
+    "subtitle": "Convenient locations across Tamil Nadu with dedicated doctors, modern equipment, and immediate pharmacy access.",
+    "allFilter": "All Branches",
+    "emergencyFilter": "24×7 Emergency",
+    "dayFilter": "Day Clinics",
+    "open24Badge": "Open 24 Hours",
+    "dayBadge": "Day Clinic",
+    "getDirections": "Get Directions",
+    "whatsappBranch": "WhatsApp Branch",
+    "bookAppointment": "Book Appointment",
+    "branchAutoSelected": "Branch automatically selected",
+    "callNow": "Call Branch",
+    "viewMap": "Interactive Map",
+    "hoursLabel": "Operating Hours",
+    "addressLabel": "Address"
+  },
+  "services": {
+    "badge": "Comprehensive Care",
+    "title": "Medical Services for Every Family Member",
+    "subtitle": "From everyday consultations to round-the-clock emergency support, our clinics are fully equipped for your healthcare needs.",
+    "generalMedicine": {
+      "title": "General & Family Medicine",
+      "desc": "Thorough diagnosis and compassionate treatment for fevers, seasonal infections, hypertension, diabetes, and ongoing family health."
+    },
+    "emergencyCare": {
+      "title": "24×7 Emergency & Trauma",
+      "desc": "Round-the-clock rapid medical response, wound dressing, acute stabilization, and continuous patient observation at Veeracholan, Perunali & Vembar."
+    },
+    "maternalCare": {
+      "title": "Maternal & Child Healthcare",
+      "desc": "Gentle prenatal and postnatal consultations, child immunizations, pediatric care, and nutritional advice for mothers."
+    },
+    "pharmacy": {
+      "title": "In-House Pharmacy & Lab",
+      "desc": "Instant access to authentic prescription medications, daily diabetic monitoring, rapid blood tests, and diagnostic screenings."
+    },
+    "chronicCare": {
+      "title": "Chronic Disease Care",
+      "desc": "Personalized management programs for blood pressure, thyroid disorders, asthma, cholesterol, and preventive lifestyle guidance."
+    },
+    "minorSurgery": {
+      "title": "Minor Procedures & Day Care",
+      "desc": "Sterile outpatient procedures, stitch removal, burn treatments, IV hydration, nebulization, and ECG monitoring."
+    }
+  },
+  "doctors": {
+    "badge": "Medical Faculty",
+    "title": "Government-Registered Doctors & Specialists",
+    "subtitle": "Dedicated physicians, pediatricians, diabetologists, and emergency officers providing attentive family care.",
+    "experience": "Yrs Exp",
+    "regNo": "Reg. No",
+    "bookWithDr": "Book Consultation",
+    "consultDoctor": "Consult Doctor",
+    "visitingNote": "Daily OPD & 24×7 Emergency Doctors available across all branches"
+  },
+  "why": {
+    "badge": "Why Patients Trust Us",
+    "title": "Healthcare That Truly Puts People First",
+    "subtitle": "We believe modern healthcare should be accessible, affordable, and deeply rooted in empathy.",
+    "item1": {
+      "title": "5+ Accessible Locations",
+      "desc": "Conveniently located across southern Tamil Nadu so you never have to travel far when you feel unwell."
+    },
+    "item2": {
+      "title": "24×7 Emergency Care",
+      "desc": "Veeracholan, Perunali, and Vembar branches stay open 24 hours every day, ready for emergencies whenever you need us."
+    },
+    "item3": {
+      "title": "Honest & Fair Pricing",
+      "desc": "Transparent consultation and medication charges without unnecessary tests or inflated bills."
+    },
+    "item4": {
+      "title": "Experienced & Kind Staff",
+      "desc": "Our doctors and nursing team listen patiently, speak your language, and provide heartfelt care."
+    }
+  },
+  "testimonials": {
+    "badge": "Patient Stories",
+    "title": "Words From Our Community",
+    "subtitle": "Real experiences shared by patients and families across our branches.",
+    "verifiedReview": "Verified Patient"
+  },
+  "appointment": {
+    "badge": "Schedule a Visit",
+    "title": "Book Your Appointment",
+    "subtitle": "Select your nearest branch and preferred time. Our reception desk will confirm your appointment promptly.",
+    "fullName": "Full Name",
+    "fullNamePlaceholder": "e.g. K. Murugan",
+    "phone": "Phone Number (+91)",
+    "phonePlaceholder": "10-digit mobile number",
+    "branch": "Preferred Branch",
+    "branchPlaceholder": "Select Branch",
+    "date": "Preferred Date",
+    "time": "Preferred Time Slot",
+    "timeMorning": "Morning (8:00 AM – 12:00 PM)",
+    "timeAfternoon": "Afternoon (12:00 PM – 4:00 PM)",
+    "timeEvening": "Evening (4:00 PM – 8:00 PM)",
+    "timeNight": "Night (8:00 PM – 11:00 PM)",
+    "message": "Reason for Visit / Symptoms (Optional)",
+    "messagePlaceholder": "Tell us briefly what you'd like to consult for...",
+    "submit": "Confirm Appointment Request",
+    "submitting": "Submitting Request...",
+    "successTitle": "Appointment Request Sent!",
+    "successDesc": "Thank you! Our clinic coordinator will call or WhatsApp you shortly to confirm your consultation time.",
+    "successNew": "Book Another Appointment",
+    "errorTitle": "Submission Issue",
+    "errorDesc": "Unable to send right now. Please call us directly or use WhatsApp below.",
+    "retry": "Try Again",
+    "orWhatsApp": "Or Book Instantly via WhatsApp",
+    "privacy": "Your medical details and contact information are strictly kept confidential."
+  },
+  "whatsapp": {
+    "buttonLabel": "Chat with Us",
+    "popupTitle": "Need Help? Chat with Amritha Clinic",
+    "popupSubtitle": "Ask a question, confirm hours, or book an appointment on WhatsApp.",
+    "chooseBranch": "Choose Branch to Message:",
+    "allBranches": "Main Clinic Helpline (General)",
+    "startChat": "Start WhatsApp Chat",
+    "onlineNow": "Doctors & Staff Active Now"
+  },
+  "footer": {
+    "tagline": "Compassionate, accessible, and round-the-clock healthcare for families across Tamil Nadu.",
+    "branchesHeading": "Our Branch Network",
+    "quickLinksHeading": "Quick Links",
+    "emergencyHeading": "24×7 Emergency Hotlines",
+    "emergencyNote": "For immediate night care, visit our Veeracholan, Perunali, or Vembar branches.",
+    "communityNote": "Made with care for the health and well-being of our community.",
+    "rights": "All rights reserved. Amritha Clinic Network.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  }
+}

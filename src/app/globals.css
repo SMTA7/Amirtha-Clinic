@@ -1,0 +1,139 @@
+@import "tailwindcss";
+
+:root {
+  --background: #fafaf8;
+  --foreground: #1a1f1e;
+  --primary-teal: #0f766e;
+  --primary-dark: #115e59;
+  --primary-light: #14b8a6;
+  --accent-gold: #d4a853;
+  --accent-gold-hover: #e5b869;
+  --sage-bg: #f4fbf7;
+  --mint-light: #f0fdf9;
+  --charcoal: #1a1f1e;
+  --muted-slate: #475569;
+  --border-glass: rgba(15, 118, 110, 0.12);
+}
+
+@theme {
+  --color-teal-brand: #0f766e;
+  --color-teal-brand-dark: #115e59;
+  --color-teal-brand-deep: #042f2e;
+  --color-gold-brand: #d4a853;
+  --color-gold-hover: #e5b869;
+  --color-offwhite: #fafaf8;
+  --color-mint-bg: #f0fdf9;
+  --color-charcoal-text: #1a1f1e;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+body {
+  background-color: #fafaf8;
+  color: #1a1f1e;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  overflow-x: hidden;
+}
+
+/* Glassmorphic Utilities */
+.glass-card {
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 12px 36px -8px rgba(15, 118, 110, 0.08), 0 4px 12px -2px rgba(0, 0, 0, 0.03);
+}
+
+.glass-card-hover {
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card-hover:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 20px 45px -10px rgba(15, 118, 110, 0.14), 0 8px 18px -4px rgba(212, 168, 83, 0.1);
+  border-color: rgba(212, 168, 83, 0.35);
+}
+
+.glass-nav {
+  background: rgba(250, 250, 248, 0.88);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(15, 118, 110, 0.1);
+}
+
+.glass-popup {
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(15, 118, 110, 0.16);
+  box-shadow: 0 25px 50px -12px rgba(15, 118, 110, 0.25);
+}
+
+.gold-gradient {
+  background: linear-gradient(135deg, #d4a853 0%, #e5b869 50%, #c59942 100%);
+}
+
+.teal-gradient {
+  background: linear-gradient(135deg, #0f766e 0%, #115e59 100%);
+}
+
+.text-gradient-teal {
+  background: linear-gradient(135deg, #0f766e 0%, #14b8a6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-gold {
+  background: linear-gradient(135deg, #b48227 0%, #d4a853 50%, #b45309 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Custom Tamil typography line height */
+.font-tamil-safe {
+  line-height: 1.75;
+}
+
+.font-sans-safe {
+  line-height: 1.6;
+}
+
+/* Ambient Pulse for WhatsApp widget */
+@keyframes softPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.55);
+  }
+  70% {
+    box-shadow: 0 0 0 16px rgba(37, 211, 102, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
+.pulse-whatsapp {
+  animation: softPulse 3s infinite cubic-bezier(0.4, 0, 0.6, 1);
+}
+
+/* Scrollbar polish */
+::-webkit-scrollbar {
+  width: 9px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fafaf8;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0f766e;
+}

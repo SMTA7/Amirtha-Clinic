@@ -1,0 +1,16 @@
+{
+  "name": "Amritha Clinic — Healthcare Network",
+  "short_name": "Amritha Clinic",
+  "description": "Trusted multi-branch healthcare network in Tamil Nadu offering 24x7 emergency medical care, experienced doctors, and pharmacy.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FAFAF8",
+  "theme_color": "#0F766E",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml"
+    }
+  ]
+}
