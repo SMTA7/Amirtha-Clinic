@@ -73,24 +73,16 @@ export const metadata: Metadata = {
       {
         url: "https://amirthaclinic.vercel.app/og-image.png",
         secureUrl: "https://amirthaclinic.vercel.app/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "Amritha Clinic | 24x7 Emergency Hospital & Healthcare",
-        type: "image/png",
-      },
-      {
-        url: "https://amirthaclinic.vercel.app/images/og-square.png",
-        secureUrl: "https://amirthaclinic.vercel.app/images/og-square.png",
-        width: 500,
-        height: 500,
+        width: 600,
+        height: 600,
         alt: "Amritha Clinic Logo",
         type: "image/png",
       },
     ],
   },
   twitter: {
-    card: "summary_large_image",
-    title: "Amritha Clinic | Multi-Branch Healthcare in Tamil Nadu",
+    card: "summary",
+    title: "Amritha Clinic | 24x7 Emergency Hospital & Healthcare",
     description: "24x7 Emergency Care and Compassionate Family Medicine across Tamil Nadu.",
     images: ["https://amirthaclinic.vercel.app/og-image.png"],
   },
@@ -117,9 +109,9 @@ export default function RootLayout({
         <meta property="og:image" content="https://amirthaclinic.vercel.app/og-image.png" />
         <meta property="og:image:secure_url" content="https://amirthaclinic.vercel.app/og-image.png" />
         <meta property="og:image:type" content="image/png" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-        <meta property="og:image:alt" content="Amritha Clinic 24x7 Healthcare Network" />
+        <meta property="og:image:width" content="600" />
+        <meta property="og:image:height" content="600" />
+        <meta property="og:image:alt" content="Amritha Clinic Logo" />
         <meta name="twitter:image" content="https://amirthaclinic.vercel.app/og-image.png" />
       </head>
       <body className="min-h-full flex flex-col font-sans bg-offwhite text-charcoal-text selection:bg-teal-700 selection:text-white">
