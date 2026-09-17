@@ -20,15 +20,60 @@ import {
   RefreshCw,
 } from "lucide-react";
 
+// Natural time periods without confusing AM/PM
+const TIME_SLOTS = [
+  {
+    groupEn: "Morning Hours",
+    groupTa: "காலை நேரம்",
+    slots: [
+      { en: "Morning (08:00 – 09:00)", ta: "காலை (08:00 – 09:00 மணி)" },
+      { en: "Morning (09:00 – 10:00)", ta: "காலை (09:00 – 10:00 மணி)" },
+      { en: "Morning (10:00 – 11:00)", ta: "காலை (10:00 – 11:00 மணி)" },
+      { en: "Morning (11:00 – 12:00)", ta: "காலை (11:00 – 12:00 மணி)" },
+    ],
+  },
+  {
+    groupEn: "Afternoon Hours",
+    groupTa: "மதிய நேரம்",
+    slots: [
+      { en: "Afternoon (12:00 – 01:00)", ta: "மதியம் (12:00 – 01:00 மணி)" },
+      { en: "Afternoon (01:00 – 02:00)", ta: "மதியம் (01:00 – 02:00 மணி)" },
+      { en: "Afternoon (02:00 – 04:00)", ta: "மதியம் (02:00 – 04:00 மணி)" },
+    ],
+  },
+  {
+    groupEn: "Evening Hours",
+    groupTa: "மாலை நேரம்",
+    slots: [
+      { en: "Evening (04:00 – 05:00)", ta: "மாலை (04:00 – 05:00 மணி)" },
+      { en: "Evening (05:00 – 06:00)", ta: "மாலை (05:00 – 06:00 மணி)" },
+      { en: "Evening (06:00 – 07:00)", ta: "மாலை (06:00 – 07:00 மணி)" },
+    ],
+  },
+  {
+    groupEn: "Night & Emergency Hours",
+    groupTa: "இரவு & அவசர பிரிவு",
+    slots: [
+      { en: "Night (07:00 – 08:00)", ta: "இரவு (07:00 – 08:00 மணி)" },
+      { en: "Night (08:00 – 09:00)", ta: "இரவு (08:00 – 09:00 மணி)" },
+      { en: "Night (09:00 – 10:00)", ta: "இரவு (09:00 – 10:00 மணி)" },
+      { en: "Late Night (24x7 Emergency Care)", ta: "இரவு 10:00 மணி மேல் (24x7 அவசர பிரிவு)" },
+    ],
+  },
+];
+
 export function AppointmentSection() {
   const { t, locale } = useLanguage();
+
+  const defaultTime =
+    locale === "ta" ? "காலை (09:00 – 10:00 மணி)" : "Morning (09:00 – 10:00)";
 
   const [formData, setFormData] = useState({
     fullName: "",
     phone: "",
     branch: "veeracholan",
     date: "",
-    timeSlot: "Morning (8:00 AM – 12:00 PM)",
+    timeSlot: defaultTime,
     message: "",
   });
 
@@ -234,7 +279,7 @@ export function AppointmentSection() {
                         phone: "",
                         branch: "veeracholan",
                         date: "",
-                        timeSlot: "Morning (8:00 AM – 12:00 PM)",
+                        timeSlot: defaultTime,
                         message: "",
                       });
                     }}
@@ -337,7 +382,7 @@ export function AppointmentSection() {
                   </div>
 
                   {/* Preferred Branch with Auto-Selection Highlighting */}
-                  <div>
+                  <div className="sm:col-span-2">
                     <div className="flex items-center justify-between mb-2">
                       <label className="block text-xs sm:text-sm font-bold text-stone-800">
                         {t("appointment.branch")} *
@@ -385,10 +430,10 @@ export function AppointmentSection() {
                     </div>
                   </div>
 
-                  {/* Preferred Date */}
+                  {/* Preferred Date (Column 1) */}
                   <div>
                     <label className="block text-xs sm:text-sm font-bold text-stone-800 mb-2">
-                      {t("appointment.date")} *
+                      {locale === "ta" ? "பரிசோதனை நாள் (Date)" : t("appointment.date")} *
                     </label>
                     <div className="relative">
                       <CalendarIcon className="w-5 h-5 text-stone-400 absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
@@ -397,7 +442,7 @@ export function AppointmentSection() {
                         min={todayStr}
                         value={formData.date}
                         onChange={(e) => setFormData({ ...formData, date: e.target.value })}
-                        className={`w-full pl-11 pr-4 py-3 rounded-2xl bg-white/90 border text-stone-900 text-sm focus:outline-none focus:ring-2 focus:ring-teal-700 transition-all ${
+                        className={`w-full pl-11 pr-4 py-3 rounded-2xl bg-white/90 border text-stone-900 text-sm focus:outline-none focus:ring-2 focus:ring-teal-700 transition-all cursor-pointer ${
                           errors.date ? "border-rose-500 bg-rose-50/20" : "border-stone-300"
                         }`}
                       />
@@ -407,31 +452,32 @@ export function AppointmentSection() {
                     )}
                   </div>
 
-                  {/* Preferred Time Slot */}
-                  <div className="sm:col-span-2">
+                  {/* Preferred Time (Column 2 - Natural time periods without AM/PM) */}
+                  <div>
                     <label className="block text-xs sm:text-sm font-bold text-stone-800 mb-2">
-                      {t("appointment.time")}
+                      {locale === "ta" ? "வருகை நேரம் (Time)" : t("appointment.time")} *
                     </label>
-                    <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
-                      {[
-                        { label: t("appointment.timeMorning"), val: "Morning" },
-                        { label: t("appointment.timeAfternoon"), val: "Afternoon" },
-                        { label: t("appointment.timeEvening"), val: "Evening" },
-                        { label: t("appointment.timeNight"), val: "Night (24x7 branches)" },
-                      ].map((slot) => (
-                        <button
-                          key={slot.val}
-                          type="button"
-                          onClick={() => setFormData({ ...formData, timeSlot: slot.label })}
-                          className={`p-2.5 rounded-xl text-xs font-semibold border transition-all text-center ${
-                            formData.timeSlot === slot.label
-                              ? "bg-teal-700 text-white border-teal-700 shadow-sm"
-                              : "bg-white text-stone-700 border-stone-200 hover:border-teal-700/30"
-                          }`}
-                        >
-                          {slot.label.split("(")[0].trim()}
-                        </button>
-                      ))}
+                    <div className="relative">
+                      <Clock className="w-5 h-5 text-stone-400 absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
+                      <select
+                        value={formData.timeSlot}
+                        onChange={(e) => setFormData({ ...formData, timeSlot: e.target.value })}
+                        className="w-full pl-11 pr-10 py-3 rounded-2xl bg-white/95 border border-stone-300 text-stone-900 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-teal-700 transition-all appearance-none cursor-pointer"
+                      >
+                        {TIME_SLOTS.map((group, gIdx) => (
+                          <optgroup key={gIdx} label={locale === "ta" ? group.groupTa : group.groupEn}>
+                            {group.slots.map((s, sIdx) => {
+                              const slotLabel = locale === "ta" ? s.ta : s.en;
+                              return (
+                                <option key={sIdx} value={slotLabel}>
+                                  {slotLabel}
+                                </option>
+                              );
+                            })}
+                          </optgroup>
+                        ))}
+                      </select>
+                      <ChevronDown className="w-4 h-4 text-stone-400 absolute right-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
                     </div>
                   </div>
 
