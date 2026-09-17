@@ -28,10 +28,12 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://amrithaclinic.com"),
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL || "https://amirthaclinic.vercel.app"
+  ),
   title: "Amritha Clinic | Trusted Multi-Branch Healthcare in Tamil Nadu",
   description:
-    "Amritha Clinic provides compassionate 24x7 emergency medical care, general medicine, and dedicated specialists across 5+ locations: Veeracholan, Perunali, Vembar, Narikkudi, Potakavayal, and Nainarkovil.",
+    "Amritha Clinic provides compassionate 24x7 emergency medical care, general medicine, and dedicated specialists across 6 locations: Veeracholan, Perunali, Vembar, Narikkudi, Potakavayal, and Nainarkovil.",
   keywords: [
     "Amritha Clinic",
     "Hospital in Veeracholan",
@@ -61,26 +63,36 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Amritha Clinic | Trusted Healthcare Across Tamil Nadu",
     description:
-      "24x7 Emergency Care and Family Healthcare across 5+ care locations: Veeracholan, Perunali, Vembar, Narikkudi, Potakavayal, and Nainarkovil.",
-    url: "https://amrithaclinic.com",
+      "24x7 Emergency Care and Family Healthcare across 6 locations: Veeracholan, Perunali, Vembar, Narikkudi, Potakavayal, and Nainarkovil.",
+    url: "https://amirthaclinic.vercel.app",
     siteName: "Amritha Clinic",
     locale: "en_IN",
     alternateLocale: ["ta_IN"],
     type: "website",
     images: [
       {
-        url: "/images/clinic/reception.jpg",
+        url: "https://amirthaclinic.vercel.app/og-image.png",
+        secureUrl: "https://amirthaclinic.vercel.app/og-image.png",
         width: 1200,
-        height: 800,
-        alt: "Amritha Clinic Healthcare Facilities",
+        height: 630,
+        alt: "Amritha Clinic | 24x7 Emergency Hospital & Healthcare",
+        type: "image/png",
+      },
+      {
+        url: "https://amirthaclinic.vercel.app/images/og-square.png",
+        secureUrl: "https://amirthaclinic.vercel.app/images/og-square.png",
+        width: 500,
+        height: 500,
+        alt: "Amritha Clinic Logo",
+        type: "image/png",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Amritha Clinic | Multi-Branch Healthcare in Tamil Nadu",
-    description: "24x7 Emergency Care and Compassionate Family Medicine.",
-    images: ["/images/clinic/reception.jpg"],
+    description: "24x7 Emergency Care and Compassionate Family Medicine across Tamil Nadu.",
+    images: ["https://amirthaclinic.vercel.app/og-image.png"],
   },
   icons: {
     icon: "/icon.svg",
@@ -101,6 +113,14 @@ export default function RootLayout({
     >
       <head>
         <MedicalClinicJsonLd />
+        {/* Explicit OpenGraph meta tags for WhatsApp & Social Scrapers */}
+        <meta property="og:image" content="https://amirthaclinic.vercel.app/og-image.png" />
+        <meta property="og:image:secure_url" content="https://amirthaclinic.vercel.app/og-image.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="Amritha Clinic 24x7 Healthcare Network" />
+        <meta name="twitter:image" content="https://amirthaclinic.vercel.app/og-image.png" />
       </head>
       <body className="min-h-full flex flex-col font-sans bg-offwhite text-charcoal-text selection:bg-teal-700 selection:text-white">
         <SmoothScroll>
